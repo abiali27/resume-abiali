@@ -300,25 +300,50 @@
 
   .section-num {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--gold);
-    letter-spacing: 1px;
-    min-width: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    min-width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--navy);
+    background: linear-gradient(135deg, var(--gold2) 0%, var(--gold) 100%);
+    border-radius: 7px;
+    box-shadow: 0 2px 6px rgba(201,168,76,.35);
   }
 
   .section-title {
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 3px;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3.5px;
     text-transform: uppercase;
     color: var(--navy);
+    position: relative;
+    padding-bottom: 3px;
+    background: linear-gradient(90deg, var(--navy) 0%, var(--navy) 60%, var(--gold) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 26px;
+    height: 2px;
+    background: var(--gold);
+    border-radius: 2px;
   }
 
   .section-line {
     flex: 1;
     height: 1px;
-    background: var(--line);
+    background: linear-gradient(90deg, var(--line) 0%, transparent 100%);
   }
 
   /* ── SKILLS GRID ───────────────────────────── */
@@ -713,6 +738,20 @@
         </div>
 
         <div class="info-card">
+          <div class="info-label">Class 12 (Commerce)</div>
+          <div class="edu-deg">Pona College</div>
+          <div class="edu-spec">Passed in 2023 &middot; Percentage: 50.83%</div>
+          <span class="status-badge">Completed</span>
+        </div>
+
+        <div class="info-card">
+          <div class="info-label">Class 10</div>
+          <div class="edu-deg">Passed in 2021</div>
+          <div class="edu-spec">Percentage: 69.2%</div>
+          <span class="status-badge">Completed</span>
+        </div>
+
+        <div class="info-card">
           <div class="info-label">Languages</div>
           <div class="lang-item">
             <span class="lang-name">English</span>
@@ -728,11 +767,7 @@
 
   </div><!-- /body -->
 
-  <!-- ══ FOOTER ════════════════════════════════════ -->
-  <div class="resume-footer">
-    <span class="footer-note">References available upon request</span>
-    <span class="footer-brand">Abiali Riyaz Saifee</span>
-  </div>
+  
 
 </div><!-- /paper -->
 </div><!-- /page-wrap -->
